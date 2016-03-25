@@ -1,0 +1,16 @@
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body id="app" style="background-image:url(img/choujiang/items/bodyback.png)">
+
+<div class="container">
+    <div class="row">
+        <draw-item v-for="item in drawItems" v-bind:item=item></draw-item>
+        <draw-center v-bind:left=centerLeft v-bind:top=centerTop v-bind:width=centerWidth></draw-center>
+    </div>
+</div>
+
+<script src="build/vendors.js"></script>
+<script src="build/draw.js"></script>
+</body>
