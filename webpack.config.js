@@ -9,6 +9,7 @@ module.exports = {
     // devtool: 'eval-source-map',
     entry: {
         draw: path.resolve(APP_PATH, 'draw.js'),
+        puzzle: path.resolve(APP_PATH, 'puzzle.js'),
         vendors: ['vue', 'underscore']
     },
     output: {
