@@ -227,7 +227,7 @@ webpackJsonp([0],[
 	            // console.log(this.item.id);
 	            if (this.item.id == i) {
 	                this.border = "solid 2px white";
-	                this.opacity = "0.7";
+	                this.opacity = "0.8";
 	            } else {
 	                this.border = "solid 2px black";
 	                this.opacity = "1";
