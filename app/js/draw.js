@@ -109,7 +109,7 @@ function init() {
     var fullwidth = viewportWidth - 40;
     if (fullwidth > 520)
         fullwidth = 520;
-        
+
     var startx = 20;
     var starty = 20;
     var x = 4;

@@ -98,6 +98,8 @@ webpackJsonp([0],[
 
 	function init() {
 	    var fullwidth = viewportWidth - 40;
+	    if (fullwidth > 520) fullwidth = 520;
+
 	    var startx = 20;
 	    var starty = 20;
 	    var x = 4;
@@ -214,7 +216,7 @@ webpackJsonp([0],[
 
 	var Vue = __webpack_require__(2);
 
-	var template = '\n    <div class="center-block text-center " style="display:inline-blick;position:absolute;padding:5px;"\n    :style="{\'top\': item.top, \'left\': item.left, \'width\': item.width, \'height\': item.width}">\n        <div :style="{\'background-image\': \'url(\' + item.link + \')\', \'border\': border, \'opacity\': opacity}"\n        style="width:100%;height:100%;background-size:100% 100%;">\n            <img style="width:50%;position:absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" v-bind:src="item.award">\n        </div>\n    </div>\n        ';
+	var template = '\n    <div class="center-block text-center" style="display:inline-blick;position:absolute;padding:5px;"\n    :style="{\'top\': item.top, \'left\': item.left, \'width\': item.width, \'height\': item.width}">\n        <div :style="{\'background-image\': \'url(\' + item.link + \')\', \'border\': border, \'opacity\': opacity}"\n        style="width:100%;height:100%;background-size:100% 100%;">\n            <img style="width:50%;position:absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" v-bind:src="item.award">\n        </div>\n    </div>\n        ';
 
 	// <img style="position:relative;left:0px;width:100%" v-bind:src="item.link" :style="{'border': border}">
 

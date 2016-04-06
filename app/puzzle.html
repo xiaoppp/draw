@@ -1,11 +1,18 @@
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
 </head>
 
 <body id="app">
-    <div>
-        
+    <div class="container" droppable="true" @drop="drop" @dragover="dragover">
+        <div>
+            <div v-for="item in items" class="col-lg-3 col-xs-3" style="padding:3px;">
+                <img :id="item.index" @dragstart="dragstart" @dragend="dragend" @dragover="dragover" @dragenter="dragenter" v-bind:src="item.link"
+                style="width:100%"/>
+            </div>
+        </div>
+        <!-- <input type="button" value="click" @click=click> -->
     </div>
 
 <script src="build/vendors.js"></script>
