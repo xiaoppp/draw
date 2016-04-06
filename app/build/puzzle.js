@@ -6,6 +6,7 @@ webpackJsonp([1],[
 
 	var Vue = __webpack_require__(2);
 	var _ = __webpack_require__(5);
+
 	var x = 3;
 	var y = 3;
 
@@ -42,7 +43,6 @@ webpackJsonp([1],[
 	    }
 	});
 
-	var dragElem = null;
 	var dragNode = null;
 	var targetNode = null;
 

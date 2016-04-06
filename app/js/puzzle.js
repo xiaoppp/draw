@@ -1,6 +1,7 @@
 
 const Vue = require('vue');
 const _ = require('underscore');
+
 const x = 3;
 const y = 3;
 
@@ -23,7 +24,7 @@ function load() {
     addItems();
 }
 
-var vm = new Vue({
+let vm = new Vue({
     el: '#app',
     data: {
         items: []
@@ -37,7 +38,6 @@ var vm = new Vue({
     }
 });
 
-let dragElem = null;
 let dragNode = null;
 let targetNode = null;
 
