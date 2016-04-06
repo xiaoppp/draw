@@ -6,8 +6,8 @@ webpackJsonp([1],[
 
 	var Vue = __webpack_require__(2);
 	var _ = __webpack_require__(5);
-	var x = 4;
-	var y = 5;
+	var x = 3;
+	var y = 3;
 
 	function addItems() {
 
@@ -18,7 +18,7 @@ webpackJsonp([1],[
 	        var item = {
 	            id: i,
 	            index: i,
-	            link: "img/puzzle/p" + i + ".jpeg"
+	            link: "img/puzzle/f" + i + ".jpg"
 	        };
 	        vm.items.push(item);
 	    }

@@ -7,7 +7,7 @@
 <body id="app">
     <div class="container" droppable="true" @drop="drop" @dragover="dragover">
         <div>
-            <div v-for="item in items" class="col-lg-3 col-xs-3" style="padding:3px;">
+            <div v-for="item in items" class="col-lg-4 col-xs-4" style="padding:1px;">
                 <img :id="item.index" @dragstart="dragstart" @dragend="dragend" @dragover="dragover" @dragenter="dragenter" v-bind:src="item.link"
                 style="width:100%"/>
             </div>

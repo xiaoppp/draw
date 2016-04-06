@@ -6,10 +6,8 @@
 <body id="app" style="background-image:url(img/choujiang/items/bodyback.png)">
 
 <div class="container">
-    <div class="row">
-        <draw-item v-for="item in drawItems" v-bind:item=item></draw-item>
-        <draw-center v-bind:left=centerLeft v-bind:top=centerTop v-bind:width=centerWidth></draw-center>
-    </div>
+    <draw-item v-for="item in drawItems" v-bind:item=item></draw-item>
+    <draw-center v-bind:left=centerLeft v-bind:top=centerTop v-bind:width=centerWidth></draw-center>
 </div>
 
 <script src="build/vendors.js"></script>

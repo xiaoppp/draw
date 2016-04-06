@@ -1,8 +1,8 @@
 
 const Vue = require('vue');
 const _ = require('underscore');
-const x = 4;
-const y = 5;
+const x = 3;
+const y = 3;
 
 function addItems () {
 
@@ -13,7 +13,7 @@ function addItems () {
         let item = {
             id: i,
             index: i,
-            link : "img/puzzle/p" + i + ".jpeg"
+            link : "img/puzzle/f" + i + ".jpg"
         }
         vm.items.push(item);
     }

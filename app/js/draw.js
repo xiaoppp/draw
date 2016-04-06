@@ -107,13 +107,11 @@ init();
 
 function init() {
     var fullwidth = viewportWidth - 40;
-    if (fullwidth > 520)
-        fullwidth = 520;
+    if (fullwidth > 480)
+        fullwidth = 480;
 
     var startx = 20;
     var starty = 20;
-    var x = 4;
-    var y = 5;
 
     var imagelen = fullwidth / 4;
 
@@ -122,6 +120,7 @@ function init() {
         item.left = 0;
         item.top = 0;
         item.width = imagelen;
+
         if (i <= 3) {
             item.left = startx + imagelen * i;
             item.top = starty;
@@ -138,9 +137,12 @@ function init() {
             item.left = startx;
             item.top = starty + imagelen * 4 - imagelen * (i - 10);
         }
+
+        // item.left = item.left + 10;
+        // item.top = item.top + 10;
         // console.log(i);
-        // console.log(item.left);
-        // console.log(item.top);
+        console.log(item.left);
+        console.log(item.top);
     })
 
     vm.drawItems = activitydata.drawItems;
@@ -164,7 +166,6 @@ function startDraw() {
         if (step > vm.drawItems.length) {
             step = 0;
         }
-
     }, 100);
 
     //获取抽奖结果，以及中奖编号
@@ -172,14 +173,12 @@ function startDraw() {
 }
 
 function stopDraw() {
-    console.log("step: " + step);
+    // console.log("step: " + step);
 
     if (stopStep == step) {
         clearInterval(interval);
         interval = null;
-
         console.log("stopStep: " + stopStep);
-
         //阶梯数组用来控制停止
         var stopSteps = [150, 300, 500, 750, 1050, 1400, 1800];
         for (let i = 0; i < stopSteps.length; i++) {
@@ -187,7 +186,6 @@ function stopDraw() {
             if (stepid > vm.drawItems.length) {
                 stepid = Number(stopStep) + i + 1 - 14;
             }
-            console.log(stepid);
             setTimeout(() => vm.$broadcast('on-refresh', stepid), stopSteps[i]);
         }
     }
@@ -196,12 +194,13 @@ function stopDraw() {
 function postDraw() {
     setTimeout(function() {
         //设置中奖编号
-        stopStep = 11;
+        stopStep = _.random(0, 13);
+        console.log(stopStep);
         stopStep = stopStep - 6;
         if (stopStep < 0) {
             stopStep = stopStep + vm.drawItems.length;
         }
-    }, 2000);
+    }, 500);
 }
 
 function onDraw() {

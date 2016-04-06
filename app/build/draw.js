@@ -98,12 +98,10 @@ webpackJsonp([0],[
 
 	function init() {
 	    var fullwidth = viewportWidth - 40;
-	    if (fullwidth > 520) fullwidth = 520;
+	    if (fullwidth > 480) fullwidth = 480;
 
 	    var startx = 20;
 	    var starty = 20;
-	    var x = 4;
-	    var y = 5;
 
 	    var imagelen = fullwidth / 4;
 
@@ -112,6 +110,7 @@ webpackJsonp([0],[
 	        item.left = 0;
 	        item.top = 0;
 	        item.width = imagelen;
+
 	        if (i <= 3) {
 	            item.left = startx + imagelen * i;
 	            item.top = starty;
@@ -128,9 +127,12 @@ webpackJsonp([0],[
 	            item.left = startx;
 	            item.top = starty + imagelen * 4 - imagelen * (i - 10);
 	        }
+
+	        // item.left = item.left + 10;
+	        // item.top = item.top + 10;
 	        // console.log(i);
-	        // console.log(item.left);
-	        // console.log(item.top);
+	        console.log(item.left);
+	        console.log(item.top);
 	    });
 
 	    vm.drawItems = activitydata.drawItems;
@@ -161,14 +163,12 @@ webpackJsonp([0],[
 	}
 
 	function stopDraw() {
-	    console.log("step: " + step);
+	    // console.log("step: " + step);
 
 	    if (stopStep == step) {
 	        clearInterval(interval);
 	        interval = null;
-
 	        console.log("stopStep: " + stopStep);
-
 	        //阶梯数组用来控制停止
 	        var stopSteps = [150, 300, 500, 750, 1050, 1400, 1800];
 
@@ -177,7 +177,6 @@ webpackJsonp([0],[
 	            if (stepid > vm.drawItems.length) {
 	                stepid = Number(stopStep) + i + 1 - 14;
 	            }
-	            console.log(stepid);
 	            setTimeout(function () {
 	                return vm.$broadcast('on-refresh', stepid);
 	            }, stopSteps[i]);
@@ -192,12 +191,13 @@ webpackJsonp([0],[
 	function postDraw() {
 	    setTimeout(function () {
 	        //设置中奖编号
-	        stopStep = 11;
+	        stopStep = _.random(0, 13);
+	        console.log(stopStep);
 	        stopStep = stopStep - 6;
 	        if (stopStep < 0) {
 	            stopStep = stopStep + vm.drawItems.length;
 	        }
-	    }, 2000);
+	    }, 500);
 	}
 
 	function onDraw() {
@@ -216,9 +216,7 @@ webpackJsonp([0],[
 
 	var Vue = __webpack_require__(2);
 
-	var template = '\n    <div class="center-block text-center" style="display:inline-blick;position:absolute;padding:5px;"\n    :style="{\'top\': item.top, \'left\': item.left, \'width\': item.width, \'height\': item.width}">\n        <div :style="{\'background-image\': \'url(\' + item.link + \')\', \'border\': border, \'opacity\': opacity}"\n        style="width:100%;height:100%;background-size:100% 100%;">\n            <img style="width:50%;position:absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" v-bind:src="item.award">\n        </div>\n    </div>\n        ';
-
-	// <img style="position:relative;left:0px;width:100%" v-bind:src="item.link" :style="{'border': border}">
+	var template = '\n    <div class="center-block text-center" style="display:inline-blick;position:absolute;padding:5px;"\n        :style="{\'top\': item.top, \'left\': item.left, \'width\': item.width - 4, \'height\': item.width - 4}">\n        <div :style="{\'background-image\': \'url(\' + item.link + \')\', \'border\': border, \'opacity\': opacity}"\n            style="width:100%;height:100%;background-size:100% 100%;">\n            <img style="width:50%;position:absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" v-bind:src="item.award">\n        </div>\n    </div>\n        ';
 
 	var drawItem = Vue.extend({
 	    template: template,
@@ -229,17 +227,17 @@ webpackJsonp([0],[
 	            // console.log(this.item.id);
 	            if (this.item.id == i) {
 	                this.border = "solid 2px white";
-	                this.opacity = "0.8";
+	                this.opacity = "0.7";
 	            } else {
-	                this.border = "";
+	                this.border = "solid 2px black";
 	                this.opacity = "1";
 	            }
 	        }
 	    },
 	    data: function data() {
 	        return {
-	            border: "",
-	            opacity: ""
+	            border: "solid 2px black",
+	            opacity: "1"
 	        };
 	    }
 	});
@@ -256,7 +254,7 @@ webpackJsonp([0],[
 
 	var Vue = __webpack_require__(2);
 
-	var template = '\n    <div style="position:absolute;padding:10px;" :style="{\'top\': top, \'left\': left, \'width\': width}">\n        <div>\n            <img src="img/choujiang/items/title.png" style="width:100%">\n        </div>\n        <div class="center-block text-center" style="margin-top:20px;">\n            <img src="img/choujiang/items/pointer.png" style="width:60%;" @click=draw()>\n        </div>\n    </div>\n        ';
+	var template = '\n    <div style="position:absolute;padding:10px;" :style="{\'top\': top, \'left\': left, \'width\': width}">\n        <div>\n            <img src="img/choujiang/items/title.png" style="width:100%">\n        </div>\n        <div style="margin:0 auto; width:60%;margin-top:10px;">\n            <img src="img/choujiang/items/pointer.png" style="width:100%;" @click=draw()>\n        </div>\n    </div>\n        ';
 
 	var drawCenter = Vue.extend({
 	    template: template,
