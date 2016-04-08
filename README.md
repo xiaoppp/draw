@@ -10,7 +10,8 @@ Some little games with draw, puzzle
 enter root:
 
 1. npm install
-2. webpack3. http-server
+2. webpack
+3. http-server
 
 - http://localhost:8080/app/draw.html
 - http://localhost:8080/app/puzzle.html
