@@ -10,7 +10,8 @@ module.exports = {
     entry: {
         draw: path.resolve(APP_PATH, 'draw.js'),
         puzzle: path.resolve(APP_PATH, 'puzzle.js'),
-        vendors: ['vue', 'underscore']
+        puzzle_canvas: path.resolve(APP_PATH, 'puzzle_canvas.js'),
+        vendors: ['vue', 'underscore', 'konva']
     },
     output: {
         path: BUILD_PATH,

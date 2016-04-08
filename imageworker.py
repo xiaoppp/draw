@@ -1,13 +1,13 @@
 from PIL import Image
 
 def process():
-    image = Image.open("app/img/puzzle/4.jpg")
+    image = Image.open("app/img/puzzle/3.jpg")
 
     print image.height
     print image.width
 
-    x = 4
-    y = 5
+    x = 3
+    y = 3
 
     width_parts = image.width / x
     height_parts = image.height / y
@@ -20,7 +20,7 @@ def process():
             print p
             #images.append(p)
             num = num + 1
-            p.save("app/img/puzzle/p" + str(num) + ".jpeg", format='jpeg', quality=100)
+            p.save("app/img/puzzle/p" + str(num) + ".jpg", format='jpeg', quality=100)
 
 if __name__ == '__main__':
     process()
