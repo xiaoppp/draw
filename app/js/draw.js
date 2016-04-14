@@ -17,72 +17,72 @@ var activitydata = {
     drawItems: [
         {
             id: 1,
-            link: "img/choujiang/items/1.png",
+            link: "img/choujiang/haiyang/1.png",
             award: "img/choujiang/awards/flow.png"
         },
         {
             id: 2,
-            link: "img/choujiang/items/2.png",
+            link: "img/choujiang/haiyang/2.png",
             award: "img/choujiang/awards/flow.png"
         },
         {
             id: 3,
-            link: "img/choujiang/items/3.png",
+            link: "img/choujiang/haiyang/3.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 4,
-            link: "img/choujiang/items/4.png",
+            link: "img/choujiang/haiyang/4.png",
             award: "img/choujiang/awards/coupon.png"
         },
         {
             id: 5,
-            link: "img/choujiang/items/5.png",
+            link: "img/choujiang/haiyang/5.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 6,
-            link: "img/choujiang/items/6.png",
+            link: "img/choujiang/haiyang/6.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 7,
-            link: "img/choujiang/items/7.png",
+            link: "img/choujiang/haiyang/7.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 8,
-            link: "img/choujiang/items/8.png",
+            link: "img/choujiang/haiyang/8.png",
             award: "img/choujiang/awards/flow.png"
         },
         {
             id: 9,
-            link: "img/choujiang/items/9.png",
+            link: "img/choujiang/haiyang/9.png",
             award: "img/choujiang/awards/mobilefee.png"
         },
         {
             id: 10,
-            link: "img/choujiang/items/10.png",
+            link: "img/choujiang/haiyang/10.png",
             award: "img/choujiang/awards/redbag.png"
         },
         {
             id: 11,
-            link: "img/choujiang/items/11.png",
+            link: "img/choujiang/haiyang/11.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 12,
-            link: "img/choujiang/items/12.png",
+            link: "img/choujiang/haiyang/12.png",
             award: "img/choujiang/awards/redbag.png"
         },
         {
             id: 13,
-            link: "img/choujiang/items/13.png",
+            link: "img/choujiang/haiyang/13.png",
             award: "img/choujiang/awards/thanks.png"
         },
         {
             id: 14,
-            link: "img/choujiang/items/14.png",
+            link: "img/choujiang/haiyang/14.png",
             award: "img/choujiang/awards/thanks.png"
         }
     ]
