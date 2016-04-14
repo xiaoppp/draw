@@ -1,5 +1,5 @@
 # little games
-Some little games with draw, puzzle
+Some little games about draw/puzzle .etc
 
 - Draw program by using vue
 - Puzzle using vue, drag/drop
